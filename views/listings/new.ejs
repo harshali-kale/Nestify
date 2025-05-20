@@ -1,0 +1,55 @@
+<% layout("/layouts/boilerplates") %>
+<link rel="stylesheet" href="/css/btnStyle.css">
+  <div class="row mt-0 mx-auto">
+    <div class="col-md-8 mx-auto">
+        <br></br>
+        <h3>Add a new listing</h3>
+        <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label"><b>Title</b></label>
+            <input name="listing[title]" placeholder="Enter Title" type="text" class="form-control border border-black border-opacity-50" required>
+        <div class="mb-3">
+            <div class="valid-feedback">Looks Good</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label"><b>Description</b></label>
+            <textarea name="listing[description]" placeholder="Enter Description" class="form-control border border-black border-opacity-50" required></textarea>
+            <div class="invalid-feedback">Enter valid description!</div>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label"><b>Upload Listing Image</b></label>
+            <input name="listing[image]" type="file" class="form-control" required>
+            
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label for="price" class="form-label"><b>Price</b></label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">₹</span>
+                    </div>    
+                <input name="listing[price]" placeholder="Enter price" type="number" class="form-control border border-black border-opacity-50" required>
+                <div class="input-group-append">
+                    <span class="input-group-text">.00</span>
+                  </div>
+                </div>  
+                <div class="invalid-feedback">Enter valid price!</div>
+            </div>
+            <div class="mb-3 col-md-8">
+                <label for="country" class="form-label"><b>Country</b></label>
+                <input name="listing[country]" placeholder="Enter Country Name" type="text" class="form-control border border-black border-opacity-50" required>
+                <div class="invalid-feedback">Enter valid country name!</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label"><b>Location</b></label>
+            <input name="listing[location]" placeholder="Enter Location" type="text" class="form-control border border-black border-opacity-50" required>
+            <div class="invalid-feedback">Enter valid location name!</div>
+        </div>
+    
+        <button class="btn btn-dark add-btn mb-3 myStyle">Create</button>
+    </form>
+    </div>
+  </div>
+    

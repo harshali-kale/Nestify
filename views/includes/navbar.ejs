@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="/css/navbar.css">
+
+
+<nav class="nav-box">
+  <div id="nav-main">
+    <div id="nav-main-bar">
+      <div style ="display: flex; align-items: center; padding: 10px 20px;">
+       <img src="/icon/nestify-logo.jpg" alt="Nestify Logo" style="height: 87px; width: auto; margin-right: 10px;">
+      </div>
+
+<div class="nav-center-wrapper">
+      <div class="search-bar">
+        <div class="search-location">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Anywhere</span>
+      </div>
+      <div class="search-divider"></div>
+        <div class="search-date">
+             <span>Anytime</span>
+        </div>
+        <div class="search-divider"></div>
+        <div class="search-guests">
+           <span>Add guests</span>
+           </div>
+
+           <button class="search-button">
+            <i class="fas fa-search"></i>
+           </button>
+         </div>
+         </div>
+
+         <div class="nav-user nav-hover">
+         <div>
+          <img src="/Icon/navbar-icon.png" id="png-img-bar">
+          <img src="/Icon/navbar-icon-cross.png" id="png-img-cross">
+        </div>
+      </div>
+      <div class="user-fnx" style="display: none;">
+        <a href="/listings/new">Nestify your home</a>
+        <% if (typeof currUser !== 'undefined') {%>
+        <% if(!currUser){ %>
+          <a href="/signup">Signup</a>
+          <a href="/login">Login</a>
+        <% } else { %>
+          <a href="/logout">Logout</a>
+        <% } %>
+        <% } %>
+      </div>
+    </div>
+    <div id="nav-search-hide">
+      <div class="nav-search nav-hover">
+        <form class="d-flex needs-validation" role="search" action="/listings/search" method="get" id="searchBox">
+          <input type="search" placeholder="Search" aria-label="Search" name="q" id="mySearchInput">
+          <button type="submit" id="search"><i class="fa-solid fa-magnifying-glass"></i></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+<script src="/js/navbar.js"></script>
